@@ -16,6 +16,7 @@ jobs:
         with:
           node-version: 18.x
       - run: npm i -f
+      - run: npm run lint:fix
       - run: npm run build
       - name: Setup AWS CLI
         uses: aws-actions/configure-aws-credentials@v1
