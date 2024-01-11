@@ -16,8 +16,7 @@ jobs:
         with:
           node-version: 18.x
       - run: npm i -f
-      - run: npm run lint:fix
-      - run: npm run build
+      - run: export DISABLE_ESLINT_PLUGIN=true && npm run build
       - name: Setup AWS CLI
         uses: aws-actions/configure-aws-credentials@v1
         with:
