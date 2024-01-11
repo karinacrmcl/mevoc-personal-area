@@ -21,6 +21,7 @@ import { SignInPage } from './pages/SignIn/SignIn';
 import SelectedWordsProvider from './providers/SelectedWordsProvider';
 import PersonalizationLayout from './layouts/PersonalizationLayout/PersonalizationLayout';
 import { TFAuthPage } from './pages/TFAuth/TFAuth';
+import HelpPage from './pages/Help/Help';
 
 function App() {
   const { pathname } = useLocation();
@@ -63,6 +64,7 @@ function App() {
                         element={<UserProfilePage />}
                       />
                       <Route path={Path.SETTINGS} element={<SettingsPage />} />
+                      <Route path={Path.HELP} element={<HelpPage />} />
                     </Routes>
                   </div>
                 </PersonalizationLayout>

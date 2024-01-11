@@ -11,20 +11,14 @@ import { MultiSelector } from '../../../UI/MultiSelector/MultiSelector';
 import s from './Appearance.module.scss';
 import { SettingsColorSelect } from './ColorSelect/ColorSelect';
 import settings from '../../../../pages/Settings/Settings.i18n.json';
-import { hexToRgb } from '../../../../utils/lib/hexToRgb';
-import { useIsMounted } from '../../../../hooks/useDelay';
 import { hexToRgb, rgbToHex } from '../../../../utils/lib/colorTransform';
-import {
-  darkTheme,
-  defaultColorValues,
-  lightTheme,
-} from '../../../../constants/kit/themes';
-import { useLocalStorage } from '../../../../hooks/useLocalStorage';
-        
+import { defaultColorValues } from '../../../../constants/kit/themes';
+
 import {
   useGetCurrentUserQuery,
   useUpdateUserMutation,
 } from '../../../../store/api/userApi';
+import classNames from 'classnames';
 
 type Color = {
   label: string;
