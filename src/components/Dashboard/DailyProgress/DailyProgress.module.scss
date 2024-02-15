@@ -7,6 +7,10 @@
     & button {
       margin-left: auto;
     }
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+    }
   }
   &_words {
     width: 100%;
@@ -24,6 +28,10 @@
     text-transform: lowercase;
     @media screen and (max-width: 1450px) {
       width: 300px;
+    }
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
     }
   }
   &_hint {
@@ -64,6 +72,21 @@
     @media screen and (max-width: 1450px) {
       font-size: 13px;
       height: 230px;
+    }
+  }
+}
+
+.card_layout {
+  width: 370px;
+  @media screen and (max-width: 900px) {
+    width: 100%;
+  }
+
+  &_content {
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
     }
   }
 }

@@ -12,4 +12,14 @@
     flex-direction: column;
     grid-gap: 18px;
   }
+  &_userinfo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_graph {
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+  }
 }

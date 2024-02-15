@@ -176,7 +176,7 @@ export function SettingsInputGroup({
                   languages[
                     languages.indexOf(
                       languages.find(el => el.value === nativeLang)
-                        || languages[0]
+                        || languages[0],
                     )
                   ]
                 }
@@ -193,7 +193,7 @@ export function SettingsInputGroup({
                   languages[
                     languages.indexOf(
                       languages.find(el => el.value === learningLang)
-                        || languages[0]
+                        || languages[0],
                     )
                   ]
                 }

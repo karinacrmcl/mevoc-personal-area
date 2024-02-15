@@ -23,7 +23,7 @@ export default function ThirdStage({ word, currentStage, onComplete }: Stage) {
   }
   const learning = useMemo(
     () => new LearningCore(changeLearningState, word, currentStage.id),
-    [word]
+    [word],
   );
 
   const start = () => learning.start();

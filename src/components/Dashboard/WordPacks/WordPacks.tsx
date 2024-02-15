@@ -15,7 +15,11 @@ export function DashboardWordPacks({ packs }: Props) {
   const { t } = useLocalTranslation(translations);
 
   return (
-    <CardLayout title={t('wordPacks')}>
+    <CardLayout
+      className={s.card_layout}
+      classNameContent={s.card_layout_content}
+      title={t('wordPacks')}
+    >
       <div className={s.wordpacks_container}>
         {packs.map(item => (
           <WordPack key={item.id} item={item} />

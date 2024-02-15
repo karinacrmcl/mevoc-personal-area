@@ -51,7 +51,7 @@ export function DashboardWordCard({ word, onEditWord }: Props) {
             onEditWord={(data: EditWordDto) => handleEdit(data)}
             wordNative={word.wordNative}
             wordLearning={word.wordLearning}
-          />
+          />,
         )}
       >
         <ListsManagementSvgSelector id="edit" />

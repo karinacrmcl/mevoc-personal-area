@@ -17,7 +17,7 @@ ChartJS.register(
   LinearScale,
   PointElement,
   LineElement,
-  Tooltip
+  Tooltip,
 );
 
 type Props = {

@@ -1,4 +1,5 @@
 import React, { CSSProperties, ReactNode } from 'react';
+import classNames from 'classnames';
 import s from './CardLayout.module.scss';
 
 type Props = {
@@ -7,6 +8,8 @@ type Props = {
   description?: string;
   bgColor?: string;
   styles?: CSSProperties;
+  className?: string;
+  classNameContent?: string;
 };
 
 export function CardLayout({
@@ -15,16 +18,20 @@ export function CardLayout({
   description,
   bgColor,
   styles,
+  className,
+  classNameContent,
 }: Props) {
   return (
     <div
-      className={s.card_container}
+      className={classNames(s.card_container, className)}
       style={{ ...styles, background: bgColor }}
     >
       <h4 className={s.card_title}>{title}</h4>
       {description && <p className={s.card_descirpiton}>{description}</p>}
 
-      <div className={s.card_content}>{children}</div>
+      <div className={classNames(s.card_content, classNameContent)}>
+        {children}
+      </div>
     </div>
   );
 }

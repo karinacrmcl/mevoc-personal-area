@@ -38,7 +38,7 @@ export function TFAuthPage() {
   const { t } = useLocalTranslation(notifTransl);
   const [_, setLangDef] = useLocalStorage<string>(
     LSKeys.UI_LANGUAGE,
-    'English'
+    'English',
   );
   const dispatch = useDispatch();
   // eslint-disable-next-line
@@ -61,7 +61,7 @@ export function TFAuthPage() {
           token: getCurrentCode(),
         },
         t,
-      })
+      }),
     ).then(() => {
       window.history.replaceState({}, document.title);
       navigate(`/${Path.HOME}`, { replace: true });
@@ -70,7 +70,7 @@ export function TFAuthPage() {
 
   const handleKeyDown = (
     e: KeyboardEvent<HTMLInputElement>,
-    index: number
+    index: number,
   ) => {
     // eslint-disable-next-line
     // @ts-ignore

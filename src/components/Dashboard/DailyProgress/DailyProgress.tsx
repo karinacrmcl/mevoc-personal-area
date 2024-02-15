@@ -26,7 +26,7 @@ export function DashboardDailyProgress() {
 
   useEffect(() => {
     setWords(
-      currentLists.map(arr => arr.words).reduce((a, b) => a.concat(b), [])
+      currentLists.map(arr => arr.words).reduce((a, b) => a.concat(b), []),
     );
   }, [currentLists]);
 
@@ -45,7 +45,8 @@ export function DashboardDailyProgress() {
 
   return (
     <CardLayout
-      styles={{ width: '370px' }}
+      className={s.card_layout}
+      classNameContent={s.card_layout_content}
       title={t('yourProgress')}
       description={t('progressSubtitle')}
     >
@@ -62,7 +63,7 @@ export function DashboardDailyProgress() {
             />
             <div className={s.progress_words}>
               {`${wordsLearned} ${t('outOf')} ${`${wordsAll || 0} ${t(
-                `word${wordsAll !== 1 ? 's' : ''}`
+                `word${wordsAll !== 1 ? 's' : ''}`,
               )}`}
             `}
             </div>

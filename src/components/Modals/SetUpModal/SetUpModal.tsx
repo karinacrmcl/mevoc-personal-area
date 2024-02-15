@@ -120,14 +120,14 @@ export default function SetUpModal({ onFillData }: Props) {
   const [lang] = useLocalStorage<string>(LSKeys.UI_LANGUAGE, 'English');
   const [langFlag, setLangFlag] = useLocalStorage<boolean>(
     LSKeys.FLAG_LANGUAGE,
-    false
+    false,
   );
 
   const submitHandler = (data: Partial<User>) => {
     onFillData({ ...data });
     if (
       languages.find(
-        el => el.value === data.nativeLang && lang !== data.nativeLang && !langFlag
+        el => el.value === data.nativeLang && lang !== data.nativeLang && !langFlag,
       )
     ) {
       setCurrentModal(
@@ -139,7 +139,7 @@ export default function SetUpModal({ onFillData }: Props) {
           onConfirm={() => {
             eventBus.emit(EventTypes.setLang, data.nativeLang || 'English');
           }}
-        />
+        />,
       );
     } else {
       setCurrentModal(null);

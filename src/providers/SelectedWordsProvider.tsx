@@ -20,7 +20,7 @@ export default function SelectedWordsProvider({ children }: Props) {
 
   const stateMemo = useMemo(
     () => ({ selectedWords, setSelectedWords }),
-    [selectedWords]
+    [selectedWords],
   );
 
   return (

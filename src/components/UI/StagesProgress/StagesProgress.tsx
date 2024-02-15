@@ -26,7 +26,7 @@ export default function StagesProgress({
   useEffect(() => {
     function checkActiveStage() {
       const estimateActive = stages.find(
-        item => item.progress >= 0 && item.progress < 100
+        item => item.progress >= 0 && item.progress < 100,
       );
       if (!estimateActive) {
         setCurrentStage(null);

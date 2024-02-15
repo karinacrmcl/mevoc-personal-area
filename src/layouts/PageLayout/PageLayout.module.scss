@@ -1,6 +1,6 @@
 .page {
   &_container {
-    width: 1500px;
+    width: 100%;
     height: 919px;
 
     background: rgba(var(--element-color), 0.25);
@@ -16,8 +16,9 @@
 
     transition: height 0.2s;
 
-    @media screen and (max-width: 1901px) {
-      width: 96%;
+    @media (max-width: 900px) {
+      padding: 20px;
+      height: 100vh;
     }
   }
   &_title {

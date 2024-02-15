@@ -59,7 +59,7 @@ export function LearningMain({ stage, updateStages }: Props) {
 
   function updateProgressStage() {
     stage.progress = Math.round(
-      countPercentage(words.length - stageQueue.size(), words.length)
+      countPercentage(words.length - stageQueue.size(), words.length),
     );
     updateStages(stage);
   }

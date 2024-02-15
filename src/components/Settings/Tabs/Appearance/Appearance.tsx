@@ -77,6 +77,7 @@ export default function AppearanceTab() {
               options={textSizes}
               defaultActive="medium"
               onClick={onTextSizeSelect}
+              className={s.multiselector}
             />
           </div>
         </div>
@@ -87,6 +88,7 @@ export default function AppearanceTab() {
               options={textColor}
               defaultActive="normal"
               onClick={onTextColorSelect}
+              className={s.multiselector}
             />
           </div>
         </div>

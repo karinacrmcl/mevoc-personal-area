@@ -15,11 +15,19 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+    }
   }
   &_lists {
     display: flex;
     align-items: center;
     grid-gap: 10px;
+
+    @media (max-width: 900px) {
+      width: 100%;
+    }
   }
   &_control {
     display: flex;

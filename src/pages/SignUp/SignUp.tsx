@@ -32,7 +32,7 @@ export default function SignUpPage() {
   const { t } = useLocalTranslation(notifTransl);
   const [_, setLangDef] = useLocalStorage<string>(
     LSKeys.UI_LANGUAGE,
-    'English'
+    'English',
   );
 
   const register = async (data: SignUpDto) => {

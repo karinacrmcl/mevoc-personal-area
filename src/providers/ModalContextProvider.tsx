@@ -13,7 +13,7 @@ export default function ModalProvider({ children }: Props) {
 
   const stateMemo = useMemo(
     () => ({ currentModal, setCurrentModal }),
-    [currentModal]
+    [currentModal],
   );
 
   return (

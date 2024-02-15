@@ -24,7 +24,7 @@ export default function SecondStage({
   }
   const learning = useMemo(
     () => new LearningCore(changeLearningState, word, currentStage.id),
-    [word]
+    [word],
   );
 
   const start = () => learning.start();

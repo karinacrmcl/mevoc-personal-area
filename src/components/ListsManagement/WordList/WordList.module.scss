@@ -7,6 +7,10 @@
     align-items: center;
     grid-gap: 15px;
     flex-wrap: wrap;
+
+    @media (max-width: 900px) {
+      width: 100%;
+    }
   }
   &_addword {
     width: 290px;
@@ -20,6 +24,9 @@
     &:hover {
       background: rgba(var(--active-color), 0.2);
       cursor: pointer;
+    }
+    @media (max-width: 900px) {
+      width: 100%;
     }
   }
 }

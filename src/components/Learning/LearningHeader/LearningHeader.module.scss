@@ -4,6 +4,10 @@
     width: 100%;
     justify-content: space-between;
     padding: 60px 80px;
+
+    @media screen and (max-width: 900px) {
+      padding: 20px 10px;
+    }
   }
   &_part {
     width: 33%;
@@ -14,6 +18,22 @@
     &:nth-child(3) {
       display: flex;
       justify-content: end;
+    }
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+
+      &:nth-child(1),
+      &:nth-child(3) {
+        position: absolute;
+        bottom: 20px;
+      }
+      &:nth-child(1) {
+        left: 10px;
+      }
+      &:nth-child(3) {
+        right: 10px;
+      }
     }
   }
 }

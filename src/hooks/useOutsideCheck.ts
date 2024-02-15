@@ -2,7 +2,7 @@ import React, { RefObject, useEffect } from 'react';
 
 export function useOutsideCheck<T extends HTMLElement = HTMLElement>(
   ref: RefObject<T>,
-  handler: (e: MouseEvent) => void
+  handler: (e: MouseEvent) => void,
 ): void {
   useEffect(() => {
     const clickHandler = (e: MouseEvent) => {

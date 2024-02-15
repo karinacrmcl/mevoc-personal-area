@@ -12,12 +12,9 @@ const baseNotification: ToastOptions = {
   autoClose: false,
   hideProgressBar: true,
   style: {
-    maxWidth: '400px',
     background: '#2A2B38',
-    borderRadius: '20px',
     padding: '10px 10px',
-    marginLeft: '-100px',
-    zIndex: 1000000000000000,
+    zIndex: 10000000,
   },
 };
 

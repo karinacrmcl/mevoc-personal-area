@@ -26,6 +26,7 @@ type DropdownProps = {
   isError?: boolean;
   error?: string;
   searchBar?: boolean;
+  className?: string;
 };
 
 export function Dropdown({
@@ -40,6 +41,7 @@ export function Dropdown({
   isError,
   error,
   listStyles,
+  className,
   searchBar,
 }: DropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -74,6 +76,7 @@ export function Dropdown({
         <button
           className={classNames(s.dropdown_active, {
             [s.dropdown_active__open]: isOpen,
+            className,
           })}
           onClick={() => setIsOpen(!isOpen)}
           style={{ ...styles }}

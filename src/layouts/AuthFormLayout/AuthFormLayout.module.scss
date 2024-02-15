@@ -20,6 +20,10 @@
   grid-gap: 40px;
   transition: all 0.2s;
 
+  @media (max-width: 900px) {
+    width: 100%;
+  }
+
   &_content {
     width: 100%;
     display: flex;

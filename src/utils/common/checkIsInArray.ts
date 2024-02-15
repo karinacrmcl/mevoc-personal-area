@@ -4,7 +4,7 @@ type WithProperty = {
 
 export function checkIsInArrayById<T extends WithProperty>(
   item: T,
-  items: T[]
+  items: T[],
 ) {
   return items.find(el => el.id === item.id) !== undefined;
 }

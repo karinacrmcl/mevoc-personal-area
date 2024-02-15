@@ -18,6 +18,10 @@
     @media screen and (max-width: 1450px) {
       margin-left: 2rem;
     }
+
+    @media screen and (max-width: 900px) {
+      margin-left: 0;
+    }
   }
   &_button {
     width: 100%;

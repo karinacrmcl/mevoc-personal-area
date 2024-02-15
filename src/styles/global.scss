@@ -70,22 +70,40 @@ input:-webkit-autofill:active {
     align-items: flex-start;
 
     height: 100vh;
-    overflow: auto;
-    overflow-y: overlay;
+    overflow-y: auto;
+    overflow-x: hidden !important;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 .page_content {
   width: 100%;
   padding-left: 360px;
   margin-top: 30px;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   @media screen and (max-width: 1450px) {
     padding-left: 330px;
   }
+
+  @media screen and (max-width: 900px) {
+    padding-left: 0;
+    padding: 0 10px;
+  }
 }
 
 .page_container {
+  overflow-x: hidden;
   width: 100%;
+  @media screen and (max-width: 900px) {
+    padding: 50px 10px 20px;
+  }
 }
 
 .remove-animation {
@@ -97,10 +115,18 @@ input:-webkit-autofill:active {
   position: absolute;
   top: 50px;
   left: 50px;
+
+  @media (max-width: 900px) {
+    top: 20px;
+    left: 20px;
+  }
 }
 
 .language-select {
   position: absolute;
   top: 50px;
   right: 50px;
+  @media (max-width: 900px) {
+    display: none;
+  }
 }

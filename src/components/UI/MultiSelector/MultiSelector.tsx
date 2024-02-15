@@ -19,6 +19,7 @@ type Props<T> = {
   options: MultiSelectorObject;
   defaultActive: keyof T;
   onClick: (active: string) => void;
+  className?: string;
 };
 
 export function MultiSelector<T extends MultiSelectorObject>({
@@ -26,6 +27,7 @@ export function MultiSelector<T extends MultiSelectorObject>({
   styles,
   defaultActive,
   onClick,
+  className,
 }: Props<T>) {
   const { t } = useLocalTranslation(merge(settings));
 
@@ -36,11 +38,11 @@ export function MultiSelector<T extends MultiSelectorObject>({
   }));
 
   const defaultIndex = transformOptions.findIndex(
-    item => item.label === defaultActive
+    item => item.label === defaultActive,
   );
   const { offset, recalcOffset } = useOffset(
     transformOptions.length,
-    defaultIndex
+    defaultIndex,
   );
   const [active, setActive] = useState<keyof T>(defaultActive);
 
@@ -53,7 +55,10 @@ export function MultiSelector<T extends MultiSelectorObject>({
   }
 
   return (
-    <div className={s.select_container} style={{ ...styles }}>
+    <div
+      className={classNames(s.select_container, className)}
+      style={{ ...styles }}
+    >
       {transformOptions.map((item, i) => (
         <button
           className={classNames(s.select_item, {

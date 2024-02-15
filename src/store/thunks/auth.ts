@@ -16,7 +16,7 @@ export const loginHandler = createAsyncThunk(
       signin: SignInDto;
       t: (str: string) => string;
     },
-    { dispatch }
+    { dispatch },
   ) => {
     try {
       await dispatch(authApi.endpoints.signin.initiate(payload.signin))
@@ -41,5 +41,5 @@ export const loginHandler = createAsyncThunk(
         type: NotificationType.DANGER,
       });
     }
-  }
+  },
 );

@@ -37,7 +37,7 @@ export function SignInPage() {
   const { t } = useLocalTranslation(notifTransl);
   const [_, setLangDef] = useLocalStorage<string>(
     LSKeys.UI_LANGUAGE,
-    'English'
+    'English',
   );
 
   const dispatch = useDispatch();
@@ -95,7 +95,7 @@ export function SignInPage() {
               eventBus.emit(EventTypes.setLang, item?.value || 'English');
             }}
             allowNoneSelected={false}
-            styles={{ width: '200px' }}
+            className={s.dropdown}
             listStyles={{ width: '300px', left: '-6.2rem' }}
           />
         </span>

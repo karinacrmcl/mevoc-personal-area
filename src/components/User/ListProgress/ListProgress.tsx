@@ -42,7 +42,7 @@ export function ListProgress({ item, active, onClick }: Props) {
         <h4>{item.name}</h4>
         <p>
           {`${item.words.length} ${t(
-            `word${item.words.length !== 1 ? 's' : ''}`
+            `word${item.words.length !== 1 ? 's' : ''}`,
           )}`}
         </p>
       </div>

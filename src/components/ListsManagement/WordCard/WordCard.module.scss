@@ -25,6 +25,10 @@
         height: 22px;
       }
     }
+
+    @media (max-width: 900px) {
+      width: 100%;
+    }
   }
   &_active {
     background: rgba(var(--active-color), 0.1);

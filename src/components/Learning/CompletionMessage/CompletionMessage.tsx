@@ -42,7 +42,7 @@ function WordsInfo({
   return (
     <div className={s.completion_words}>
       {`${wordsLearned} ${t('outOf')} ${`${words} ${t(
-        `word${words !== 1 ? 's' : ''}`
+        `word${words !== 1 ? 's' : ''}`,
       )}`}`}
     </div>
   );

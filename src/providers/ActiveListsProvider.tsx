@@ -17,7 +17,7 @@ export default function ActiveListsProvider({ children }: Props) {
 
   const stateMemo = useMemo(
     () => ({ currentLists, setCurrentLists }),
-    [currentLists]
+    [currentLists],
   );
 
   return (

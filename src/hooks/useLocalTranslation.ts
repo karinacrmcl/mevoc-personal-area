@@ -11,7 +11,7 @@ type LocalConfig = Record<string, Locale>;
 export const useLocalTranslation = (config: LocalConfig) => {
   const [currentLang, setCurrentLang] = useLocalStorage(
     LSKeys.UI_LANGUAGE,
-    'English'
+    'English',
   );
 
   useEffect(() => {

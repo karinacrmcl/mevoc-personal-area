@@ -94,7 +94,7 @@ export function DashboardPage() {
               setLangOption(item);
             }}
             allowNoneSelected={false}
-            styles={{ width: '200px' }}
+            className={s.dropdown}
             listStyles={{ width: '300px', left: '-6.2rem' }}
           />
         </div>
@@ -109,6 +109,7 @@ export function DashboardPage() {
           <Button
             type="primary"
             styles={startBtn}
+            className={s.start_button}
             onClick={() => navigate(`/${Path.LEARNING}`)}
             disabled={!currentLists.find(el => el.words.length > 0)}
           >

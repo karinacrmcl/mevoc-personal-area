@@ -45,7 +45,7 @@ export const authSlice = createSlice({
         (state, action) => {
           if (action.error.name === 'ConditionError') return;
           state.isAuthorized = false;
-        }
+        },
       )
       .addMatcher(authApi.endpoints.signout.matchFulfilled, state => {
         state.isAuthorized = false;

@@ -2,6 +2,14 @@
   &_container {
     display: flex;
     align-items: center;
+
+    @media (max-width: 900px) {
+      max-width: 100%;
+      overflow-x: auto;
+
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
   }
   &_item {
     margin: 0 10px 0 0;

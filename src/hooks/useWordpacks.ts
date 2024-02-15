@@ -22,7 +22,7 @@ const CONFIG = merge(
   transportation,
   technology,
   seasons,
-  animals
+  animals,
 );
 
 export default function useWordpacks(): PackEnriched[] {
@@ -31,7 +31,7 @@ export default function useWordpacks(): PackEnriched[] {
     skip: !user?.id,
   });
   const relevantWordpacks = wordpacks.filter(
-    w => !lists?.map(l => l.name.toLowerCase()).includes(w.name.toLowerCase())
+    w => !lists?.map(l => l.name.toLowerCase()).includes(w.name.toLowerCase()),
   );
   const native = LanguageLocale[user?.nativeLang as keyof typeof LanguageLocale];
   const learning = LanguageLocale[user?.learningLang as keyof typeof LanguageLocale];

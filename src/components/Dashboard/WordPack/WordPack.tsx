@@ -73,7 +73,7 @@ export function WordPack({ item }: Props) {
         <h4 className={s.wordpack_title}>{item.name}</h4>
         <p>
           {`${item.words?.length} ${t(
-            `word${item.words?.length !== 1 ? 's' : ''}`
+            `word${item.words?.length !== 1 ? 's' : ''}`,
           )}`}
         </p>
       </div>
@@ -88,7 +88,7 @@ export function WordPack({ item }: Props) {
                 <WordpackModal
                   onConfirm={() => addHandler()}
                   wordpack={item}
-                />
+                />,
               )
             // eslint-disable-next-line
           }

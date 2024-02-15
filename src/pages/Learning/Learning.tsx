@@ -23,11 +23,11 @@ export function LearningPage() {
       (item: { id: number; progress: number; name?: string }) => ({
         ...item,
         name: item.name ? t(item.name) : `${t('stage')} ${item.id}`,
-      })
-    )
+      }),
+    ),
   );
   const [activeStage, setActiveStage] = useState<ProgressStage | null>(
-    tempStages[0]
+    tempStages[0],
   );
   const { currentLists } = useActiveLists();
 

@@ -24,6 +24,12 @@
       padding: 19px 22px;
     }
 
+    @media screen and (max-width: 900px) {
+      min-height: fit-content;
+      max-height: fit-content;
+      height: fit-content;
+    }
+
     &::after {
       content: '';
       position: absolute;
@@ -73,6 +79,12 @@
     margin-top: 10px;
     @media screen and (max-width: 1450px) {
       margin-top: 6px;
+    }
+
+    @media screen and (max-width: 900px) {
+      min-height: fit-content;
+      max-height: fit-content;
+      height: fit-content;
     }
   }
 }

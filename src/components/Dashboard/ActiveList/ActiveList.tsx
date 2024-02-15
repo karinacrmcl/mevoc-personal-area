@@ -64,7 +64,7 @@ export function DashboardActiveList({ item, index }: Props) {
             <h4 className={s.activvelist_title}>{item.name}</h4>
             <p>
               {`${listWords?.length || 0} ${t(
-                `word${(listWords?.length || 0) !== 1 ? 's' : ''}`
+                `word${(listWords?.length || 0) !== 1 ? 's' : ''}`,
               )}`}
             </p>
           </div>

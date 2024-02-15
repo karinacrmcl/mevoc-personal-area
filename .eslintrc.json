@@ -30,41 +30,26 @@
     }
   },
   "rules": {
-    "linebreak-style": ["error", "windows"],
     "react/jsx-filename-extension": [0],
     "import/extensions": "off",
-    "semi": ["error", "always"],
+    "semi": ["warn", "always"],
     "react/jsx-props-no-spreading": "off",
-    "indent": [
-      "error",
-      2,
-      { "SwitchCase": 1, "ignoredNodes": ["JSXElement"] }
-    ],
-    "arrow-parens": ["error", "as-needed"],
-    "prefer-promise-reject-errors": ["error", { "allowEmptyReject": true }],
+    "indent": ["warn", 2, { "SwitchCase": 1, "ignoredNodes": ["JSXElement"] }],
+    "arrow-parens": ["warn", "as-needed"],
+    "prefer-promise-reject-errors": ["warn", { "allowEmptyReject": true }],
     "space-before-function-paren": [
-      "error",
+      "warn",
       { "anonymous": "always", "named": "never", "asyncArrow": "always" }
     ],
     "import/prefer-default-export": "off",
     "react/require-default-props": [
-      "error",
+      "warn",
       { "ignoreFunctionalComponents": true }
     ],
     "react/button-has-type": "off",
     "max-len": "off",
-    "comma-dangle": [
-      2,
-      {
-        "arrays": "always-multiline",
-        "objects": "always-multiline",
-        "imports": "always-multiline",
-        "exports": "always-multiline",
-        "functions": "ignore"
-      }
-    ],
     "import/no-extraneous-dependencies": [
-      "error",
+      "warn",
       {
         "devDependencies": ["**/*.stories.*", "**/.storybook/**/*.*"],
         "peerDependencies": true
@@ -79,17 +64,17 @@
       }
     ],
     "jsx-a11y/label-has-for": [
-      "error",
+      "warn",
       {
         "required": {
           "some": ["nesting", "id"]
         }
       }
     ],
-    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
-    "no-param-reassign": ["error", { "props": false }],
+    "no-plusplus": ["warn", { "allowForLoopAfterthoughts": true }],
+    "no-param-reassign": ["warn", { "props": false }],
     "no-shadow": "off",
-    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-shadow": ["warn"],
     "no-nested-ternary": "off",
     "max-len": ["warn", { "code": 120 }]
   }

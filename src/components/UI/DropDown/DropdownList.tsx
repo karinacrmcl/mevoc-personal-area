@@ -50,11 +50,11 @@ export function DropdownList({
       {options && searchBar && (
         <SearchInput
           items={JSON.parse(JSON.stringify(options)).map(
-            (el: Option) => el.value
+            (el: Option) => el.value,
           )}
           setItems={items => {
             setResult(
-              JSON.parse(JSON.stringify(options)).filter((el: Option) => items.includes(el.value))
+              JSON.parse(JSON.stringify(options)).filter((el: Option) => items.includes(el.value)),
             );
           }}
           size="small"

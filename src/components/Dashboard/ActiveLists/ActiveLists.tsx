@@ -42,7 +42,11 @@ export function DashboardActiveLists({ onAddList }: Props) {
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
-      <CardLayout title={t('activeLists')}>
+      <CardLayout
+        className={s.card_layout}
+        classNameContent={s.card_layout_content}
+        title={t('activeLists')}
+      >
         <Button
           type="primary"
           onClick={() => onAddList()}
