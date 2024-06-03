@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { merge } from 'lodash';
 import moment from 'moment';
@@ -25,6 +25,7 @@ import schema from './validation';
 import settings from '../../../../pages/Settings/Settings.i18n.json';
 import common from '../../../UI/Common.i18n.json';
 import { dropdownStyles } from '../../../../shared/styles/dropdown-variations';
+import { Option } from '../../../UI/DropDown/types';
 
 type Props = {
   user: User;
@@ -72,6 +73,24 @@ export function SettingsInputGroup({
   };
 
   const isSmallScreen = useMediaQuery({ maxWidth: '1100px' });
+
+  const [country, setCountry] = useState<null | string>(null);
+
+  useEffect(() => {
+    const locale = navigator.language;
+    const country = locale.split('-')[1];
+    setCountry(country);
+  }, []);
+
+  const findCountryIdByName = (countryName: string) => {
+    const country = countries.find(
+      c => c.locale.toLowerCase() === countryName.toLowerCase(),
+    );
+    return country ? country.id : null;
+  };
+
+  console.log(country);
+  const id = findCountryIdByName(country || '');
 
   return (
     <FormProvider {...values}>
@@ -153,7 +172,7 @@ export function SettingsInputGroup({
               />
               <HookFormSelect
                 options={countries}
-                defaultSelected={countries[87]}
+                defaultSelected={countries[id || 0]}
                 label={t('location')}
                 name="location"
                 styles={{
