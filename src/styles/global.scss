@@ -24,6 +24,8 @@ body {
   background-image: url('../assets/images/background.svg');
   background-repeat: no-repeat;
   background-size: cover;
+
+  overflow-x: hidden !important;
 }
 
 input:-webkit-autofill,
@@ -72,6 +74,11 @@ input:-webkit-autofill:active {
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden !important;
+
+    & * {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
 
     &::-webkit-scrollbar {
       display: none;
